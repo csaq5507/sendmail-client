@@ -4,6 +4,11 @@ Simple package that allows you to send mails using your standard Mail Applicatio
 In contrast to the mailto link this package supports an attachment.
 Just developed for own needs, if you may request more features i'll implement them. ;)
 
+
+Calling send will open a "New Email" window of your standard Mail application installed on your device.
+
+Caution!! Atm only for Windows.
+
 ## Requirements
 
 To install, you will need:
