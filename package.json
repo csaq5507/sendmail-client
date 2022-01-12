@@ -5,12 +5,35 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "publish-demo": "git branch -D gh-pages; git push origin --delete gh-pages; git checkout -b gh-pages; cd demo-site; yarn; npm run build; cd ..; git add .; git add -f demo-site/dist; git add -f demo-site/node_modules/uptick-demo-site/dist; git commit -m \"Demo site build\"; git push origin gh-pages; git checkout master; git push origin `git subtree split --prefix demo-site gh-pages`:gh-pages --force;",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-js": "node ./node_modules/webpack/bin/webpack.js --mode production --config webpack.config.js",
-    "build-css": "node ./node_modules/node-sass/bin/node-sass src/style.sass dist/react-interactive-tutorials.css",
-    "build": "npm run build-js && npm run build-css",
-    "prepublish": "npm run build"
+    "test": "node test.js"
   },
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csaq5507/sendmail-client.git"
+  },
+  "keywords": [
+    "send",
+    "mail",
+    "standard client",
+    "thunderbird",
+    "outlook",
+    "sendmail",
+    "nodejs",
+    "mapi",
+    "windows"
+  ],
+  "author": "Ivan Waldboth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csaq5507/sendmail-client/issues"
+  },
+  "homepage": "https://github.com/csaq5507/sendmail-client#readme",
+  "dependencies": {
+    "bindings": "~1.2.1",
+    "node-addon-api": "^1.0.0"
+  },
+  "gypfile": true,
+  "devDependencies": {
+    "@types/node": "^14.14.37"
+  }
 }
